@@ -10,5 +10,10 @@ def myview(request):
 
 #class based view
 class MyView(View):
+    name = 'Siddharth'
     def get(self, request):
         return HttpResponse("<h1>Class Based View.</h1>")
+
+class MyViewChild(MyView):
+    def get(self, request):
+        return HttpResponse(self.name)

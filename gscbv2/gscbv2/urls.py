@@ -1,4 +1,4 @@
-"""gscbv1 URL Configuration
+"""gscbv2 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -19,7 +19,6 @@ from school import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('func/', views.myview, name="FuncView"),
-    path('cls/', views.MyView.as_view(), name="ClassView"),
-    path('subcls/', views.MyViewChild.as_view(), name="SubClassView"),
+    path('homefun1/', views.homefun, name="homefun1"),
+    path('homefun2/', views.HomeClassView.as_view(), name="homefun2"),
 ]
