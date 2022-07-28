@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.TemplateView.as_view(template_name="school/home.html"), name="blankhome"),
     path('home/', views.RedirectView.as_view(url="/"), name="home"),
-    path('index/', views.RedirectView.as_view(pattern_name="home"), name="index"),
+    path('index/', views.RedirectView.as_view(pattern_name="home"), name="index"),#pattern name should match thhe name in the other path field
     # path('google/', views.RedirectView.as_view(url="https://www.google.com"), name="google"),#external link
     path('ggl/', views.GoogleRedirectView.as_view(), name="google2"),
     path('ig/', views.RedirectView.as_view(url="https://www.reddit.com"), name="reddit"), #higher preference for ig since written earlier
