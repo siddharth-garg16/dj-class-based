@@ -7,6 +7,7 @@ from .models import Student
 class StudentFormCreateView(CreateView):
     model = Student
     fields = ['name', 'email', 'password']
+    #can use template_name here too
     # success_url = "/thanks/"
 
 class ThanksTemplateView(TemplateView):
