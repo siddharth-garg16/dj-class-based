@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('create/', views.StudentCreateView.as_view(), name='create'),
     path('thanks/', views.ThanksView.as_view(), name='thanks'),
+    path('deleted/', views.DeleteView.as_view(), name='deleted'),
     path('success/', views.UpdateView.as_view(), name='success'),
     path('update/<int:pk>', views.StudentUpdateView.as_view(), name="update"),
     path('delete/<int:pk>', views.StudentDeleteView.as_view(), name="delete"),

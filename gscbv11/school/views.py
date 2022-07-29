@@ -7,7 +7,7 @@ from django import forms
 # Create your views here.
 class StudentDeleteView(DeleteView):
     model = Student
-    success_url = "/create/"
+    success_url = "/deleted/"
 
 class StudentCreateView(CreateView):
     model = Student
@@ -39,4 +39,7 @@ class StudentUpdateView(UpdateView):
 
 class UpdateView(TemplateView):
     template_name = "school/update_success.html"
+
+class DeleteView(TemplateView):
+    template_name = "school/deleted.html"
     
