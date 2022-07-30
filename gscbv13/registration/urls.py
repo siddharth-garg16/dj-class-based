@@ -5,3 +5,5 @@ from django.contrib.auth.decorators import login_required
 urlpatterns = [
     path('profile/', login_required(views.ProfileView.as_view()), name="profile"),
 ]
+
+#method 2 of doing this
